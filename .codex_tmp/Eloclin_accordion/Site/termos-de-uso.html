@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso | Eloclin Ipiranga</title>
+  <meta name="description" content="Termos de Uso do site da Eloclin Ipiranga.">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16.png">
+  <link rel="apple-touch-icon" href="imagens/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="main-header">
+    <a href="index.html" class="logo">
+      <img src="imagens/Logo Eloclin.png" alt="Logo Eloclin" class="logo-image">
+    </a>
+    <nav id="main-nav" aria-label="Navegação principal">
+      <a href="index.html#servicos">Especialidades</a>
+      <a href="index.html#precos">Preços</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="exames.html">Exames</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:5516997697575" class="btn-outline">Ligar</a>
+      <a href="https://wa.me/5516997697575" target="_blank" rel="noopener" class="btn-whatsapp">WhatsApp</a>
+    </div>
+    <button type="button" class="hamburger" id="menu-toggle" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Termos de <em>Uso</em></h1>
+      <p>Condições gerais para navegação e uso das informações disponíveis neste site.</p>
+    </div>
+  </section>
+
+  <section class="legal-section">
+    <div class="legal-content">
+      <h2>Uso do site</h2>
+      <p>Este site apresenta informações institucionais, especialidades, exames, formas de contato e canais de agendamento da Eloclin Ipiranga.</p>
+      <h2>Informações médicas</h2>
+      <p>O conteúdo do site tem caráter informativo e não substitui consulta, avaliação, diagnóstico ou orientação individual de profissional de saúde.</p>
+      <h2>Agendamentos</h2>
+      <p>Solicitações enviadas pelo site ou WhatsApp dependem de confirmação da equipe da clínica. O envio de mensagem não garante horário automaticamente.</p>
+      <h2>Links externos</h2>
+      <p>O site pode conter links para serviços externos, como WhatsApp, Instagram, mapas e entidades profissionais. Esses serviços possuem regras próprias.</p>
+      <h2>Contato</h2>
+      <p>Para dúvidas sobre estes termos, fale conosco pelo e-mail eloclin.ipiranga@gmail.com ou WhatsApp (16) 99769-7575.</p>
+    </div>
+  </section>
+  <script>
+    const nav = document.getElementById('main-nav');
+    const menuToggle = document.getElementById('menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    });
+  </script>
+</body>
+</html>
