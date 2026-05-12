@@ -42,10 +42,11 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Ir para o conteudo principal</a>
 
 <header id="main-header">
-  <a href="index.html" class="logo">
-    <img src="imagens/Logo Eloclin.png" alt="Logo Eloclin" class="logo-image">
+  <a href="index.html" class="logo" aria-label="Página inicial da Eloclin Ipiranga">
+    <img src="imagens/logo-eloclin.png" alt="Logo Eloclin" class="logo-image" width="693" height="264">
     <div>
       <span class="logo-name">Eloclin</span>
       <span class="logo-tagline">Clínica Médica Ipiranga</span>
@@ -55,7 +56,7 @@
     <a href="index.html#servicos">Especialidades</a>
     <a href="index.html#precos">Preços</a>
     <a href="index.html#sobre">Sobre</a>
-    <a href="equipe.html" class="active">Atendimento</a>
+    <a href="equipe.html" class="active" aria-current="page">Atendimento</a>
     <a href="exames.html">Exames</a>
     <a href="index.html#contato">Contato</a>
   </nav>
@@ -67,6 +68,7 @@
   </button>
 </header>
 
+<main id="conteudo">
 <!-- HERO -->
 <div class="page-hero">
   <div class="page-hero-content">
@@ -85,6 +87,26 @@
     <div class="section-label">Cuidado Integrado</div>
     <h2 class="section-title">Especialidades <em>para diferentes</em><br>necessidades de saúde</h2>
     <p class="section-sub">A Eloclin Ipiranga reúne atendimento médico e serviços de diagnóstico em um ambiente acessível, acolhedor e bem localizado. Para confirmar especialidades, profissionais disponíveis e horários, fale com nossa equipe pelo WhatsApp.</p>
+  </div>
+  <div class="care-grid">
+    <article class="care-card reveal">
+      <div class="care-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+      <h3>Agendamento orientado</h3>
+      <p>O primeiro contato identifica especialidade, urgência, convênio e melhor janela de horário para evitar deslocamentos desnecessários.</p>
+    </article>
+    <article class="care-card reveal">
+      <div class="care-icon"><i class="fa-solid fa-file-medical" aria-hidden="true"></i></div>
+      <h3>Exames e preparo</h3>
+      <p>Quando o atendimento envolve exames, a clínica informa documentos, preparo básico e prazos diretamente pelo WhatsApp.</p>
+    </article>
+    <article class="care-card reveal">
+      <div class="care-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+      <h3>Atendimento local</h3>
+      <p>Unidade no Ipiranga, em Ribeirão Preto, com recepção, salas de atendimento e estrutura para exames selecionados.</p>
+    </article>
+  </div>
+  <div class="care-note reveal">
+    <strong>Importante:</strong> a disponibilidade de profissionais pode variar por dia. Confirme a especialidade e o horário com a recepção antes de ir à clínica.
   </div>
 </section>
 
@@ -133,26 +155,20 @@
   <a href="https://wa.me/5516993028212" target="_blank" rel="noopener" class="btn-white"><i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp</a>
 </div>
 
-<!-- PAGE LINKS BAR -->
-<div class="page-links-bar">
-  <span>Navegue:</span>
-  <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
-  <a href="exames.html"><i class="fa-solid fa-flask"></i> Exames &amp; Diagnósticos</a>
-  <a href="equipe.html"><i class="fa-solid fa-user-doctor"></i> Atendimento Multidisciplinar</a>
-</div>
+</main>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo">
-        <img src="imagens/Logo Eloclin.png" alt="Logo Eloclin" class="logo-image">
+        <img src="imagens/logo-eloclin.png" alt="Logo Eloclin" class="logo-image" width="693" height="264">
       </a>
       <p class="footer-desc">Cuidado médico de qualidade com preços acessíveis para toda a comunidade de Ribeirão Preto e região.</p>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/eloclinipiranga/" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/5516993028212" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:eloclin.ipiranga@gmail.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.instagram.com/eloclinipiranga/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram da Eloclin Ipiranga"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/5516993028212" target="_blank" rel="noopener" title="WhatsApp" aria-label="Chamar a Eloclin Ipiranga no WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="mailto:eloclin.ipiranga@gmail.com" title="E-mail" aria-label="Enviar e-mail para a Eloclin Ipiranga"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
       </div>
     </div>
     <div>
@@ -195,32 +211,11 @@
   </div>
 </footer>
 
-<script>
-  const nav = document.getElementById('main-nav');
-  const menuToggle = document.getElementById('menu-toggle');
-
-  menuToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuToggle.classList.toggle('open', isOpen);
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuToggle.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menu');
-    });
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.10 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script defer src="assets/js/menu.js"></script>
+<script defer src="assets/js/reveal.js"></script>
+<script defer src="assets/js/accordion.js"></script>
+<script defer src="assets/js/lightbox.js"></script>
+<script defer src="assets/js/contact-form.js"></script>
+<script defer src="assets/js/main.js"></script>
 </body>
 </html>

@@ -23,9 +23,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="legal-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteudo principal</a>
   <header id="main-header">
-    <a href="index.html" class="logo">
-      <img src="imagens/Logo Eloclin.png" alt="Logo Eloclin" class="logo-image">
+    <a href="index.html" class="logo" aria-label="Página inicial da Eloclin Ipiranga">
+      <img src="imagens/logo-eloclin.png" alt="Logo Eloclin" class="logo-image" width="693" height="264">
     </a>
     <nav id="main-nav" aria-label="Navegação principal">
       <a href="index.html#servicos">Especialidades</a>
@@ -43,6 +44,7 @@
     </button>
   </header>
 
+  <main id="conteudo">
   <section class="page-hero">
     <div class="page-hero-content">
       <h1>Política de <em>Privacidade</em></h1>
@@ -64,16 +66,12 @@
       <p>Para dúvidas sobre privacidade, fale conosco pelo e-mail eloclin.ipiranga@gmail.com ou WhatsApp +55 16 99302-8212.</p>
     </div>
   </section>
-  <script>
-    const nav = document.getElementById('main-nav');
-    const menuToggle = document.getElementById('menu-toggle');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      menuToggle.classList.toggle('open', isOpen);
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-      menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-    });
-  </script>
+  </main>
+  <script defer src="assets/js/menu.js"></script>
+  <script defer src="assets/js/reveal.js"></script>
+  <script defer src="assets/js/accordion.js"></script>
+  <script defer src="assets/js/lightbox.js"></script>
+  <script defer src="assets/js/contact-form.js"></script>
+  <script defer src="assets/js/main.js"></script>
 </body>
 </html>

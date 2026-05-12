@@ -31,6 +31,9 @@
       "email": "eloclin.ipiranga@gmail.com",
       "url": "https://eloclinipiranga.com.br/",
       "priceRange": "R$80-R$120",
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Eloclin%20Ipiranga%20Av.%20Dom%20Pedro%20I%20908%20Ipiranga%20Ribeir%C3%A3o%20Preto%20SP",
+      "areaServed": "Ribeirão Preto, SP",
+      "medicalSpecialty": ["GeneralPractice", "Dermatology", "Endocrinology", "Geriatric", "Gynecologic", "Neurologic", "Ophthalmologic", "Orthopedic", "Otolaryngologic", "Pediatric", "Psychiatric"],
       "sameAs": ["https://www.instagram.com/eloclinipiranga/"],
       "address": {
         "@type": "PostalAddress",
@@ -44,11 +47,12 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Ir para o conteudo principal</a>
 
 <!-- HEADER -->
 <header id="main-header">
-  <a href="index.html" class="logo">
-    <img src="imagens/Logo Eloclin.png" alt="Logo Eloclin" class="logo-image">
+  <a href="index.html" class="logo" aria-label="Página inicial da Eloclin Ipiranga">
+    <img src="imagens/logo-eloclin.png" alt="Logo Eloclin" class="logo-image" width="693" height="264">
   </a>
   <nav id="main-nav" aria-label="Navegação principal">
     <a href="#servicos">Especialidades</a>
@@ -66,6 +70,7 @@
   </button>
 </header>
 
+<main id="conteudo">
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
@@ -82,27 +87,38 @@
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">+12</span><span class="stat-label">Especialidades</span></div>
       <div class="stat"><span class="stat-num">+9</span><span class="stat-label">Planos aceitos</span></div>
-      <div class="stat"><span class="stat-num">Ipiranga</span><span class="stat-label">Atendimento local</span></div>
+      <div class="stat"><span class="stat-num">+100 mil</span><span class="stat-label">Pacientes atendidos</span></div>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-photo-ring">
+      <img src="imagens/foto1.jpeg" alt="" width="1038" height="537" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
 
-<!-- CONVÊNIOS STRIP -->
-<div class="strip">
-  <span class="strip-label">Convênios aceitos</span>
-  <div class="strip-items">
-    <span class="strip-item">Baldocchi</span>
-    <span class="strip-item">Ciclo Saúde</span>
-    <span class="strip-item">Fynd</span>
-    <span class="strip-item">Gocare</span>
-    <span class="strip-item">Ideal</span>
-    <span class="strip-item">Nicácio</span>
-    <span class="strip-item">Prever</span>
-    <span class="strip-item">Santa Casa</span>
-    <span class="strip-item">Sermed Hospitalar</span>
-    <span class="strip-item">Vida Boa Saúde</span>
+<!-- CONVÊNIOS -->
+<section id="convenios">
+  <div class="convenios-intro reveal">
+    <div>
+      <div class="section-label">Planos aceitos</div>
+      <h2 class="section-title">Convênios <em>parceiros</em></h2>
+    </div>
+    <p class="section-sub section-sub--narrow">Atendemos diferentes planos e benefícios.<br>Confirme a cobertura pelo WhatsApp antes do agendamento.</p>
   </div>
-</div>
+  <div class="convenios-card reveal">
+    <span class="convenio-item">Baldocchi</span>
+    <span class="convenio-item">Ciclo Saúde</span>
+    <span class="convenio-item">Fynd</span>
+    <span class="convenio-item">Gocare</span>
+    <span class="convenio-item">Ideal</span>
+    <span class="convenio-item">Nicácio</span>
+    <span class="convenio-item">Prever</span>
+    <span class="convenio-item">Santa Casa</span>
+    <span class="convenio-item">Sermed Hospitalar</span>
+    <span class="convenio-item">Vida Boa Saúde</span>
+  </div>
+</section>
 
 <!-- SERVIÇOS -->
 <section id="servicos">
@@ -228,7 +244,7 @@
       <h3>Clínico Geral</h3>
       <div class="preco-valor">
         <span class="preco-cifra">R$</span>
-        <span class="preco-num">80</span>
+        <span class="preco-num">80,00</span>
       </div>
       <p class="preco-desc">Pagamento em dinheiro ou Pix</p>
       <p class="preco-alt">R$ 90,00 no cartão</p>
@@ -238,7 +254,7 @@
       <h3>Demais Consultas</h3>
       <div class="preco-valor">
         <span class="preco-cifra">R$</span>
-        <span class="preco-num">110</span>
+        <span class="preco-num">110,00</span>
       </div>
       <p class="preco-desc">Pagamento em dinheiro ou Pix</p>
       <p class="preco-alt">R$ 120,00 no cartão</p>
@@ -248,10 +264,9 @@
       <h3>Exame de Vista</h3>
       <div class="preco-valor">
         <span class="preco-cifra">R$</span>
-        <span class="preco-num">80</span>
+        <span class="preco-num">80,00</span>
       </div>
       <p class="preco-desc">Realizado por oftalmologista especializado</p>
-      <p class="preco-alt">Aceitamos todos os convênios listados</p>
     </div>
   </div>
 </section>
@@ -321,7 +336,7 @@
   </div>
 </section>
 
-<div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true">
+<div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" aria-hidden="true" hidden>
   <button type="button" class="lightbox-close" aria-label="Fechar imagem ampliada"><i class="fa-solid fa-xmark"></i></button>
   <button type="button" class="lightbox-nav lightbox-prev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
   <figure class="lightbox-content">
@@ -369,7 +384,7 @@
 
 <!-- DEPOIMENTOS -->
 <section id="depoimentos">
-  <div class="reveal section-heading-center">
+  <div class="reveal depo-heading">
     <div class="section-label">Depoimentos</div>
     <h2 class="section-title">O que nossos <em>pacientes</em> dizem</h2>
   </div>
@@ -378,7 +393,6 @@
       <div class="depo-stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
       <p class="depo-text">"Excelente atendimento, profissionais qualificados, fui muito bem recepcionado, minha primeira vez e já indico. Ótimo profissional que fui atendido e ótimo custo benefício saio satisfeito e bem contente, 5 estrelas merecidos."</p>
       <div class="depo-author">
-        <div class="depo-avatar">L</div>
         <div>
           <div class="depo-name">Lucas Silva</div>
           <div class="depo-label">Avaliação no Google - 3 anos atrás</div>
@@ -389,7 +403,6 @@
       <div class="depo-stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
       <p class="depo-text">"Ótima clínica, fui bem atendida desde a recepção ao médico, ambiente acolhedor, organizado e confortável. Alem da boa localização. Recomendo a clínica com certeza"</p>
       <div class="depo-author">
-        <div class="depo-avatar">M</div>
         <div>
           <div class="depo-name">Marcele Carvalho</div>
           <div class="depo-label">Avaliação no Google - 2 anos atrás</div>
@@ -400,7 +413,6 @@
       <div class="depo-stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
       <p class="depo-text">"Já faz um tempo que passo com os médicos daí e eu adoro, e também estou indicando 😃"</p>
       <div class="depo-author">
-        <div class="depo-avatar">C</div>
         <div>
           <div class="depo-name">Cintia Palhares</div>
           <div class="depo-label">Avaliação no Google - 2 anos atrás</div>
@@ -450,40 +462,43 @@
         </div>
       </div>
       <div class="map-wrap reveal">
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Eloclin%20Ipiranga%20Av.%20Dom%20Pedro%20I%20908%20Ipiranga%20Ribeir%C3%A3o%20Preto%20SP" target="_blank" rel="noopener" aria-label="Abrir localização da Eloclin Ipiranga no Google Maps">
-          <span class="map-link-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
-          <span>
-            <strong>Ver rota no Google Maps</strong>
-            <small>Av. Dom Pedro I, 908 - Ipiranga, Ribeirão Preto - SP</small>
-          </span>
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        <iframe
+          src="https://maps.google.com/maps?hl=pt-BR&amp;q=Av.%20Dom%20Pedro%20I%2C%20908%20-%20Ipiranga%2C%20Ribeir%C3%A3o%20Preto%20-%20SP&amp;z=16&amp;output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Eloclin Ipiranga - Ribeirão Preto"></iframe>
+        <a class="map-route-link" href="https://www.google.com/maps/search/?api=1&amp;query=Eloclin%20Ipiranga%20Av.%20Dom%20Pedro%20I%20908%20Ipiranga%20Ribeir%C3%A3o%20Preto%20SP" target="_blank" rel="noopener">
+          <i class="fa-solid fa-route" aria-hidden="true"></i> Abrir rota
         </a>
       </div>
     </div>
     <div class="reveal">
-      <form class="contact-form" onsubmit="handleForm(event)">
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mkoyewdo" method="POST" novalidate>
+        <p class="form-note">Envie sua mensagem pelo formulario. A equipe da Eloclin Ipiranga entrará em contato com você através dos meios cadastrados.</p>
+        <!-- Formspree: substitua o action acima pelo endpoint real gerado no painel do servico. -->
+        <input type="hidden" name="_subject" value="Novo contato pelo site Eloclin Ipiranga">
+        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-row">
           <div class="form-group">
             <label for="nome">Nome Completo *</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required>
           </div>
           <div class="form-group">
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(16) 9 0000-0000">
+            <label for="telefone">Telefone / WhatsApp *</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(16) 9 0000-0000" autocomplete="tel" inputmode="tel" required>
           </div>
         </div>
         <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="seu@email.com">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" inputmode="email" required>
         </div>
         <div class="form-group">
-          <label for="especialidade">Especialidade de Interesse</label>
-          <select id="especialidade" name="especialidade">
-            <option value="">Selecione uma especialidade...</option>
-            <option>Clínico Geral</option>
+          <label for="especialidade">Especialidade ou assunto *</label>
+          <select id="especialidade" name="especialidade" required>
+            <option value="">Selecione uma opcao...</option>
+            <option>Clinico Geral</option>
             <option>Dermatologia</option>
             <option>Endocrinologia</option>
-            <option>Exames & Diagnósticos</option>
+            <option>Exames & Diagnosticos</option>
             <option>Geriatria</option>
             <option>Ginecologia</option>
             <option>Neurologia</option>
@@ -497,34 +512,34 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Descreva sua dúvida ou necessidade..."></textarea>
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Descreva sua duvida ou necessidade..." required></textarea>
         </div>
-        <button type="submit" class="btn-form"><i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp</button>
+        <label class="form-consent" for="consentimento">
+          <input type="checkbox" id="consentimento" name="consentimento" value="Autorizado" required>
+          <span>Autorizo o uso dos dados informados para retorno da Eloclin Ipiranga pelos canais de contato, conforme a <a href="politica-de-privacidade.html">Politica de Privacidade</a>.</span>
+        </label>
+        <p class="form-feedback" data-form-feedback aria-live="polite"></p>
+        <button type="submit" class="btn-form"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensagem</button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- PAGE LINKS BAR -->
-<div class="page-links-bar">
-  <span>Navegue:</span>
-  <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
-  <a href="exames.html"><i class="fa-solid fa-flask"></i> Exames &amp; Diagnósticos</a>
-</div>
+</main>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo">
-        <img src="imagens/Logo Eloclin.png" alt="Logo Eloclin" class="logo-image">
+        <img src="imagens/logo-eloclin.png" alt="Logo Eloclin" class="logo-image" width="693" height="264">
       </a>
       <p class="footer-desc">Cuidado médico de qualidade com preços acessíveis para toda a comunidade de Ribeirão Preto e região.</p>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/eloclinipiranga/" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/5516993028212" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:eloclin.ipiranga@gmail.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.instagram.com/eloclinipiranga/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram da Eloclin Ipiranga"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/5516993028212" target="_blank" rel="noopener" title="WhatsApp" aria-label="Chamar a Eloclin Ipiranga no WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="mailto:eloclin.ipiranga@gmail.com" title="E-mail" aria-label="Enviar e-mail para a Eloclin Ipiranga"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
       </div>
     </div>
     <div>
@@ -555,130 +570,11 @@
   </div>
 </footer>
 
-<script>
-  const header = document.getElementById('main-header');
-  const nav = document.getElementById('main-nav');
-  const menuToggle = document.getElementById('menu-toggle');
-
-  menuToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuToggle.classList.toggle('open', isOpen);
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuToggle.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menu');
-    });
-  });
-
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.10 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  function handleForm(e) {
-    e.preventDefault();
-    const form = e.target;
-    const btn = e.target.querySelector('.btn-form');
-    const nome = document.getElementById('nome').value.trim();
-    const telefone = document.getElementById('telefone').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const especialidade = document.getElementById('especialidade').value || 'uma consulta';
-    const mensagem = document.getElementById('mensagem').value.trim();
-    const texto = [
-      `Olá! Sou ${nome} e gostaria de agendar ${especialidade}.`,
-      telefone ? `Telefone: ${telefone}` : '',
-      email ? `E-mail: ${email}` : '',
-      mensagem ? `Mensagem: ${mensagem}` : ''
-    ].filter(Boolean).join('\n');
-
-    btn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Abrindo WhatsApp...';
-    window.open('https://wa.me/5516993028212?text=' + encodeURIComponent(texto), '_blank', 'noopener');
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp';
-      form.reset();
-    }, 1200);
-  }
-
-  const galleryItems = Array.from(document.querySelectorAll('.estrutura-item'));
-  const lightbox = document.getElementById('gallery-lightbox');
-  const lightboxImage = document.getElementById('lightbox-image');
-  const lightboxCaption = document.getElementById('lightbox-caption');
-  const closeLightbox = document.querySelector('.lightbox-close');
-  const prevLightbox = document.querySelector('.lightbox-prev');
-  const nextLightbox = document.querySelector('.lightbox-next');
-  let currentGalleryIndex = 0;
-
-  function showGalleryImage(index) {
-    currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
-    const image = galleryItems[currentGalleryIndex].querySelector('img');
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.alt;
-    lightboxCaption.textContent = image.alt;
-  }
-
-  function openGallery(index) {
-    showGalleryImage(index);
-    lightbox.classList.add('active');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('lightbox-open');
-    closeLightbox.focus();
-  }
-
-  function closeGallery() {
-    lightbox.classList.remove('active');
-    lightbox.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('lightbox-open');
-  }
-
-  galleryItems.forEach((item, index) => {
-    item.addEventListener('click', () => openGallery(index));
-  });
-
-  closeLightbox.addEventListener('click', closeGallery);
-  prevLightbox.addEventListener('click', () => showGalleryImage(currentGalleryIndex - 1));
-  nextLightbox.addEventListener('click', () => showGalleryImage(currentGalleryIndex + 1));
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeGallery();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
-    if (e.key === 'Escape') closeGallery();
-    if (e.key === 'ArrowLeft') showGalleryImage(currentGalleryIndex - 1);
-    if (e.key === 'ArrowRight') showGalleryImage(currentGalleryIndex + 1);
-  });
-
-  document.querySelectorAll('.acc-head').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.acc-item');
-      const body = item.querySelector('.acc-body');
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      document.querySelectorAll('.acc-item').forEach(other => {
-        other.classList.remove('acc-open');
-        other.querySelector('.acc-head').setAttribute('aria-expanded', 'false');
-        other.querySelector('.acc-body').hidden = true;
-      });
-
-      if (!isOpen) {
-        item.classList.add('acc-open');
-        btn.setAttribute('aria-expanded', 'true');
-        body.hidden = false;
-      }
-    });
-  });
-</script>
+<script defer src="assets/js/menu.js"></script>
+<script defer src="assets/js/reveal.js"></script>
+<script defer src="assets/js/accordion.js"></script>
+<script defer src="assets/js/lightbox.js"></script>
+<script defer src="assets/js/contact-form.js"></script>
+<script defer src="assets/js/main.js"></script>
 </body>
 </html>
