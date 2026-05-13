@@ -2170,7 +2170,7 @@ footer .logo-image {
 
   #hero {
     min-height: auto;
-    padding: 118px 0 72px;
+    padding: 118px 0 54px;
   }
 
   .hero-content {
@@ -2182,16 +2182,15 @@ footer .logo-image {
     display: none;
   }
 
-  .hero-blob {
-    right: -160px;
-    bottom: -210px;
-    opacity: 0.82;
+  .hero-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f6fcfd 48%, #e8f8fa 100%);
   }
 
+  .hero-bg::before,
+  .hero-bg::after,
+  .hero-blob,
   .hero-blob-2 {
-    right: 160px;
-    bottom: -185px;
-    opacity: 0.72;
+    display: none;
   }
 
   .sobre-grid { grid-template-columns: 1fr; }
@@ -2210,6 +2209,7 @@ footer .logo-image {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
+    margin-top: 28px;
   }
   .stat-num { font-size: 1.45rem; }
   .stat-label { font-size: 11px; }
