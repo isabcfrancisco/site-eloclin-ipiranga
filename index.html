@@ -308,7 +308,9 @@
     <h2 class="section-title">Conheça nossa <em>estrutura</em></h2>
     <p class="section-sub">Ambientes preparados para oferecer conforto, segurança e acolhimento em cada atendimento.</p>
   </div>
-  <div class="estrutura-grid">
+  <div class="estrutura-carousel">
+    <button type="button" class="estrutura-arrow estrutura-arrow-prev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <div class="estrutura-grid" id="estrutura-gallery" tabindex="0" aria-label="Fotos da estrutura da Eloclin">
     <button type="button" class="estrutura-item reveal" aria-label="Ampliar foto da fachada da clínica Eloclin">
       <img src="./imagens/foto1.jpeg" alt="Fachada da Eloclin Ipiranga na Avenida Dom Pedro I" class="foto-estrutura" width="1038" height="537" loading="lazy" decoding="async">
     </button>
@@ -333,6 +335,8 @@
     <button type="button" class="estrutura-item reveal" aria-label="Ampliar foto do corredor interno da clínica Eloclin">
       <img src="./imagens/foto8.jpeg" alt="Corredor interno da Eloclin com salas identificadas e área de café" class="foto-estrutura" width="1034" height="535" loading="lazy" decoding="async">
     </button>
+    </div>
+    <button type="button" class="estrutura-arrow estrutura-arrow-next" aria-label="Próxima foto"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
   </div>
 </section>
 
@@ -388,7 +392,9 @@
     <div class="section-label">Depoimentos</div>
     <h2 class="section-title">O que nossos <em>pacientes</em> dizem</h2>
   </div>
-  <div class="depo-grid">
+  <div class="depo-carousel">
+    <button type="button" class="depo-arrow depo-arrow-prev" aria-label="Depoimento anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <div class="depo-grid" id="depo-gallery" tabindex="0" aria-label="Depoimentos de pacientes">
     <div class="depo-card reveal">
       <div class="depo-stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
       <p class="depo-text">"Excelente atendimento, profissionais qualificados, fui muito bem recepcionado, minha primeira vez e já indico. Ótimo profissional que fui atendido e ótimo custo benefício saio satisfeito e bem contente, 5 estrelas merecidos."</p>
@@ -419,6 +425,8 @@
         </div>
       </div>
     </div>
+    </div>
+    <button type="button" class="depo-arrow depo-arrow-next" aria-label="Próximo depoimento"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
   </div>
 </section>
 
@@ -573,6 +581,8 @@
 <script defer src="assets/js/menu.js"></script>
 <script defer src="assets/js/reveal.js"></script>
 <script defer src="assets/js/accordion.js"></script>
+<script defer src="assets/js/structure-carousel.js"></script>
+<script defer src="assets/js/testimonials-carousel.js"></script>
 <script defer src="assets/js/lightbox.js"></script>
 <script defer src="assets/js/contact-form.js"></script>
 <script defer src="assets/js/main.js"></script>

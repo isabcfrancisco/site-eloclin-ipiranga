@@ -1103,6 +1103,14 @@ section { padding: 44px 5%; }
   margin-top: 18px;
 }
 
+.estrutura-carousel {
+  position: relative;
+}
+
+.estrutura-arrow {
+  display: none;
+}
+
 .estrutura-item {
   display: block;
   width: 100%;
@@ -1390,6 +1398,14 @@ figcaption h3 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 18px;
   margin-top: 24px;
+}
+
+.depo-carousel {
+  position: relative;
+}
+
+.depo-arrow {
+  display: none;
 }
 
 .depo-card {
@@ -2194,6 +2210,8 @@ footer .logo-image {
   }
 
   .sobre-grid { grid-template-columns: 1fr; }
+  .sobre-text { order: 1; }
+  .sobre-visual { order: 2; }
   .contato-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero-stats { gap: 24px; }
@@ -2213,7 +2231,37 @@ footer .logo-image {
   }
   .stat-num { font-size: 1.45rem; }
   .stat-label { font-size: 11px; }
-  .accordion { padding: 10px 18px; border-radius: 18px; }
+  .accordion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: initial;
+    column-gap: 18px;
+    padding: 0;
+    border-radius: 0;
+  }
+  .acc-item {
+    display: block;
+    break-inside: auto;
+  }
+  .acc-head {
+    gap: 8px;
+    padding: 10px 0;
+  }
+  .acc-left {
+    gap: 8px;
+  }
+  .acc-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .acc-name {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+  .acc-chevron {
+    font-size: 11px;
+  }
   #precos,
   #estrutura,
   #convenios,
@@ -2226,24 +2274,153 @@ footer .logo-image {
   }
   .form-row { grid-template-columns: 1fr; }
   .convenios-card {
-    grid-template-columns: 1fr;
-    padding: 16px;
-    border-radius: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 0;
+    border-radius: 0;
   }
-  .estrutura-grid,
-  .valores-grid {
+  .convenio-item {
+    min-height: 42px;
+    padding: 9px 10px;
+    border-radius: 14px;
+    font-size: 0.78rem;
+    gap: 8px;
+  }
+  .convenio-item::before {
+    width: 7px;
+    height: 7px;
+    box-shadow: 0 0 0 4px rgba(0, 174, 184, 0.12);
+  }
+  .estrutura-grid {
     grid-template-columns: 1fr;
+  }
+  .valores-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .estrutura-carousel {
+    margin-top: 18px;
+  }
+  .estrutura-grid {
+    display: flex;
+    gap: 14px;
+    margin-top: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 4px;
+    padding: 0 4px 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .estrutura-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .estrutura-item {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+  .estrutura-arrow {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--blue-200);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--blue-800);
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-50%);
+  }
+  .estrutura-arrow-prev {
+    left: 8px;
+  }
+  .estrutura-arrow-next {
+    right: 8px;
+  }
+  .depo-carousel {
+    margin-top: 22px;
+  }
+  .depo-grid {
+    display: flex;
+    gap: 14px;
+    margin-top: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 4px;
+    padding: 0 4px 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .depo-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .depo-card {
+    flex: 0 0 88%;
+    scroll-snap-align: start;
+  }
+  .depo-arrow {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--blue-200);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--blue-800);
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-50%);
+  }
+  .depo-arrow-prev {
+    left: 8px;
+  }
+  .depo-arrow-next {
+    right: 8px;
   }
   .foto-estrutura {
-    height: 180px;
+    height: 178px;
   }
   .valor-card {
-    padding: 18px;
+    padding: 14px 10px;
+    border-radius: 14px;
+  }
+  .valor-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .valor-card h3 {
+    font-size: 0.88rem;
+    margin-bottom: 5px;
+  }
+  .valor-card p {
+    font-size: 0.72rem;
+    line-height: 1.4;
   }
   .contato-info {
     padding: 20px;
   }
-  .sobre-items { grid-template-columns: 1fr; }
+  .sobre-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .sobre-item {
+    padding: 10px;
+    gap: 8px;
+    border-radius: 14px;
+  }
+  .sobre-item span {
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
   .footer-grid { grid-template-columns: 1fr; }
   .header-actions .btn-outline { display: none; }
   .gallery-lightbox { padding: 70px 18px; }
