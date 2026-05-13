@@ -738,13 +738,13 @@ section { padding: 44px 5%; }
 }
 
 .convenio-item::before {
-  content: '';
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
+  content: '\f058';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: white;
   flex: 0 0 auto;
-  background: var(--blue-500);
-  box-shadow: 0 0 0 5px rgba(0, 174, 184, 0.12);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
