@@ -2283,6 +2283,10 @@ footer .logo-image {
     padding: 0;
     border-radius: 0;
   }
+  .acc-mobile-col {
+    display: flex;
+    flex-direction: column;
+  }
   .acc-item {
     display: block;
     break-inside: auto;

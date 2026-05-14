@@ -1,8 +1,26 @@
 window.Eloclin = window.Eloclin || {};
 
+function setupMobileColumns(items) {
+  const accordion = document.getElementById('especialidades-accordion');
+  if (!accordion || accordion.querySelector('.acc-mobile-col')) return;
+
+  const columns = [document.createElement('div'), document.createElement('div')];
+  columns.forEach(column => {
+    column.className = 'acc-mobile-col';
+  });
+
+  items.forEach((item, index) => {
+    columns[index % 2].appendChild(item);
+  });
+
+  accordion.replaceChildren(...columns);
+}
+
 window.Eloclin.initAccordion = function initAccordion() {
-  const items = document.querySelectorAll('.acc-item');
+  const items = Array.from(document.querySelectorAll('.acc-item'));
   if (!items.length) return;
+
+  setupMobileColumns(items);
 
   items.forEach((item, index) => {
     const button = item.querySelector('.acc-head');
