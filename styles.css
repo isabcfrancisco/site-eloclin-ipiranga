@@ -2256,22 +2256,25 @@ footer .logo-image {
   }
   .hero-stats {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 116px));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: center;
-    column-gap: 28px;
-    row-gap: 10px;
+    column-gap: 8px;
+    row-gap: 0;
     margin-top: 24px;
   }
   .hero-stats .stat:nth-child(3) {
-    grid-column: 1 / -1;
+    grid-column: auto;
     align-items: center;
   }
   .hero-stats .stat {
     align-items: center;
     text-align: center;
   }
-  .stat-num { font-size: 1.45rem; }
-  .stat-label { font-size: 11px; }
+  .stat-num { font-size: 1.28rem; }
+  .stat-label {
+    font-size: 10px;
+    line-height: 1.2;
+  }
   .accordion {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
