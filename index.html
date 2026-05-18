@@ -86,7 +86,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">+12</span><span class="stat-label">Especialidades</span></div>
-      <div class="stat"><span class="stat-num">+9</span><span class="stat-label">Planos aceitos</span></div>
+      <div class="stat"><span class="stat-num">+10</span><span class="stat-label">Convênios aceitos</span></div>
       <div class="stat"><span class="stat-num">+100 mil</span><span class="stat-label">Pacientes atendidos</span></div>
     </div>
   </div>
@@ -108,14 +108,15 @@
   </div>
   <div class="convenios-card reveal">
     <span class="convenio-item">Baldocchi</span>
-    <span class="convenio-item">Ciclo Saúde</span>
     <span class="convenio-item">Fynd</span>
     <span class="convenio-item">Gocare</span>
     <span class="convenio-item">Ideal</span>
     <span class="convenio-item">Nicácio</span>
     <span class="convenio-item">Prever</span>
     <span class="convenio-item">Santa Casa</span>
+    <span class="convenio-item">Sassom</span>
     <span class="convenio-item">Sermed Hospitalar</span>
+    <span class="convenio-item">Sulumedi</span>
     <span class="convenio-item">Vida Boa Saúde</span>
   </div>
 </section>
@@ -480,9 +481,8 @@
       </div>
     </div>
     <div class="reveal">
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mkoyewdo" method="POST" novalidate>
+      <form class="contact-form" id="contact-form" action="http://127.0.0.1:5000/api/contato" method="POST" novalidate>
         <p class="form-note">Envie sua mensagem pelo formulario. A equipe da Eloclin Ipiranga entrará em contato com você através dos meios cadastrados.</p>
-        <!-- Formspree: substitua o action acima pelo endpoint real gerado no painel do servico. -->
         <input type="hidden" name="_subject" value="Novo contato pelo site Eloclin Ipiranga">
         <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-row">
@@ -584,7 +584,7 @@
 <script defer src="assets/js/structure-carousel.js"></script>
 <script defer src="assets/js/testimonials-carousel.js"></script>
 <script defer src="assets/js/lightbox.js"></script>
-<script defer src="assets/js/contact-form.js"></script>
+<script defer src="script.js"></script>
 <script defer src="assets/js/main.js"></script>
 </body>
 </html>
