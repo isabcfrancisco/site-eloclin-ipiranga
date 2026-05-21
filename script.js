@@ -1,5 +1,5 @@
-// Endpoint local do backend Flask.
-const API_CONTATO_URL = 'http://127.0.0.1:5000/api/contato';
+// Substitua "agio" pelo link exato que o Render gerou, caso eu tenha lido errado da imagem!
+const API_CONTATO_URL = 'https://backend-eloclin-dgio.onrender.com/api/contato';
 
 function mostrarMensagem(formulario, mensagem, tipo = 'info') {
   // Usa a area de feedback que ja existe no formulario.
@@ -42,7 +42,7 @@ window.Eloclin.initContactForm = function initContactForm() {
     if (!formulario.checkValidity()) {
       mostrarMensagem(
         formulario,
-        'Preencha os campos obrigatorios antes de enviar.',
+        'Preencha os campos obrigatórios antes de enviar.',
         'error'
       );
       formulario.reportValidity();
@@ -64,7 +64,7 @@ window.Eloclin.initContactForm = function initContactForm() {
     alternarCarregamento(botao, true);
 
     try {
-      // Envia os dados para o backend local.
+      // Usando a variável API_CONTATO_URL que definimos lá no topo!
       const resposta = await fetch(API_CONTATO_URL, {
         method: 'POST',
         headers: {
@@ -82,12 +82,13 @@ window.Eloclin.initContactForm = function initContactForm() {
       formulario.reset();
     } catch (erro) {
       alert('Erro ao enviar a mensagem.');
+      // Mensagem de erro atualizada para fazer sentido em produção
       mostrarMensagem(
         formulario,
-        'Nao foi possivel enviar a mensagem. Verifique se o backend Flask esta rodando.',
+        'Não foi possível enviar a mensagem no momento. Tente novamente mais tarde.',
         'error'
       );
-      console.error('Erro ao enviar formulario:', erro);
+      console.error('Erro ao enviar formulário:', erro);
     } finally {
       alternarCarregamento(botao, false);
     }

@@ -769,7 +769,8 @@ section { padding: 44px 5%; }
 }
 
 .accordion {
-  column-count: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 32px;
   max-width: 1180px;
   background: transparent;
@@ -780,9 +781,8 @@ section { padding: 44px 5%; }
 }
 
 .acc-item {
-  display: inline-block;
+  display: block;
   width: 100%;
-  break-inside: avoid;
   border-top: 1px solid rgba(143, 226, 232, 0.70);
   border-bottom: 1px solid rgba(143, 226, 232, 0.70);
 }
@@ -881,7 +881,7 @@ section { padding: 44px 5%; }
 }
 
 @media (max-width: 580px) {
-  .accordion { column-count: 1; }
+  .accordion { grid-template-columns: 1fr; }
   .acc-head { padding: 13px 0; }
   .acc-left { gap: 12px; }
   .acc-icon {
@@ -899,7 +899,7 @@ section { padding: 44px 5%; }
 }
 
 @media (min-width: 581px) and (max-width: 900px) {
-  .accordion { column-count: 2; }
+  .accordion { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ─── PRICES ─── */
