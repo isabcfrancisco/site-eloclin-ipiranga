@@ -1,8 +1,37 @@
 window.Eloclin = window.Eloclin || {};
 
 window.Eloclin.initAccordion = function initAccordion() {
+  const accordion = document.querySelector('.accordion');
   const items = Array.from(document.querySelectorAll('.acc-item'));
   if (!items.length) return;
+
+  const getColumnCount = () => {
+    if (window.matchMedia('(max-width: 580px)').matches) return 1;
+    if (window.matchMedia('(max-width: 900px)').matches) return 2;
+    return 3;
+  };
+
+  const arrangeColumns = () => {
+    if (!accordion) return;
+
+    const columns = getColumnCount();
+    const currentColumns = Number(accordion.dataset.columns || 0);
+    if (currentColumns === columns) return;
+
+    accordion.dataset.columns = String(columns);
+    accordion.replaceChildren();
+
+    const columnElements = Array.from({ length: columns }, () => {
+      const column = document.createElement('div');
+      column.className = 'acc-col';
+      accordion.appendChild(column);
+      return column;
+    });
+
+    items.forEach((item, index) => {
+      columnElements[index % columns].appendChild(item);
+    });
+  };
 
   items.forEach((item, index) => {
     const button = item.querySelector('.acc-head');
@@ -35,4 +64,7 @@ window.Eloclin.initAccordion = function initAccordion() {
       }
     });
   });
+
+  arrangeColumns();
+  window.addEventListener('resize', arrangeColumns);
 };

@@ -772,6 +772,7 @@ section { padding: 44px 5%; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 32px;
+  align-items: start;
   max-width: 1180px;
   background: transparent;
   border: 0;
@@ -780,9 +781,16 @@ section { padding: 44px 5%; }
   box-shadow: none;
 }
 
+.acc-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .acc-item {
   display: block;
   width: 100%;
+  align-self: start;
   border-top: 1px solid rgba(143, 226, 232, 0.70);
   border-bottom: 1px solid rgba(143, 226, 232, 0.70);
 }
@@ -996,7 +1004,7 @@ section { padding: 44px 5%; }
 
 .sobre-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
   gap: 30px;
   align-items: center;
 }
@@ -1005,7 +1013,7 @@ section { padding: 44px 5%; }
   position: relative;
   border-radius: 22px;
   overflow: hidden;
-  height: 300px;
+  height: clamp(320px, 28vw, 360px);
   background: linear-gradient(135deg, var(--blue-100), var(--blue-300));
   box-shadow: var(--shadow-blue);
 }
@@ -2218,7 +2226,7 @@ footer .logo-image {
   .sobre-text { order: 1; }
   .sobre-visual {
     order: 2;
-    height: min(250px, 58vw);
+    height: clamp(260px, 58vw, 330px);
   }
   .contato-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -2282,15 +2290,11 @@ footer .logo-image {
   }
   .accordion {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     column-count: initial;
-    column-gap: 18px;
+    column-gap: 0;
     padding: 0;
     border-radius: 0;
-  }
-  .acc-mobile-col {
-    display: flex;
-    flex-direction: column;
   }
   .acc-item {
     display: block;
