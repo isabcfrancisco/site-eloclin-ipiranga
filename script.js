@@ -2,7 +2,6 @@
 const API_CONTATO_URL = 'https://backend-eloclin-dgio.onrender.com/api/contato';
 
 function mostrarMensagem(formulario, mensagem, tipo = 'info') {
-  // Usa a area de feedback que ja existe no formulario.
   const feedback = formulario.querySelector('[data-form-feedback]');
 
   if (feedback) {
@@ -26,19 +25,16 @@ function alternarCarregamento(botao, carregando) {
 window.Eloclin = window.Eloclin || {};
 
 window.Eloclin.initContactForm = function initContactForm() {
-  // Captura o formulario de contato pelo ID existente no HTML.
   const formulario = document.getElementById('contact-form');
 
   if (!formulario) return;
 
   formulario.addEventListener('submit', async (event) => {
-    // Impede o recarregamento da pagina.
     event.preventDefault();
 
     const botao = formulario.querySelector('.btn-form');
     mostrarMensagem(formulario, '');
 
-    // Mantem a validacao nativa dos campos obrigatorios do formulario.
     if (!formulario.checkValidity()) {
       mostrarMensagem(
         formulario,
@@ -49,22 +45,30 @@ window.Eloclin.initContactForm = function initContactForm() {
       return;
     }
 
-    // Captura os valores digitados nos campos principais.
+    // Captura os valores digitados no HTML
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone') ? document.getElementById('telefone').value.trim() : '';
+    const especialidade = document.getElementById('especialidade') ? document.getElementById('especialidade').value.trim() : '';
     const mensagem = document.getElementById('mensagem').value.trim();
+    
+    // Captura o checkbox da LGPD (Certifique-se de que o input checkbox no HTML tem id="autorizacao")
+    const checkboxAutorizacao = document.getElementById('autorizacao');
+    const autorizouDados = checkboxAutorizacao ? checkboxAutorizacao.checked : false;
 
-    // Monta o JSON que sera enviado para a API Flask.
+    // Monta o JSON completo com os 6 parâmetros
     const dadosContato = {
-      nome,
-      email,
-      mensagem
+      nome: nome,
+      email: email,
+      telefone: telefone,
+      especialidade: especialidade,
+      mensagem: mensagem,
+      autorizacao_dados: autorizouDados
     };
 
     alternarCarregamento(botao, true);
 
     try {
-      // Usando a variável API_CONTATO_URL que definimos lá no topo!
       const resposta = await fetch(API_CONTATO_URL, {
         method: 'POST',
         headers: {
@@ -82,7 +86,6 @@ window.Eloclin.initContactForm = function initContactForm() {
       formulario.reset();
     } catch (erro) {
       alert('Erro ao enviar a mensagem.');
-      // Mensagem de erro atualizada para fazer sentido em produção
       mostrarMensagem(
         formulario,
         'Não foi possível enviar a mensagem no momento. Tente novamente mais tarde.',
