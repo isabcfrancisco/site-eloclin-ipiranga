@@ -1,5 +1,5 @@
 // Substitua "agio" pelo link exato que o Render gerou, caso eu tenha lido errado da imagem!
-const API_CONTATO_URL = 'https://backend-eloclin-dgio.onrender.com/api/contato';
+const API_CONTATO_URL = 'https://backend-eloclin-dgio.onrender.com/contato';
 
 function mostrarMensagem(formulario, mensagem, tipo = 'info') {
   const feedback = formulario.querySelector('[data-form-feedback]');
