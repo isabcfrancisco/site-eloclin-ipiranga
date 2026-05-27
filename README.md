@@ -2,7 +2,7 @@
 
 Site institucional da **Eloclin Ipiranga**, clínica médica popular localizada em Ribeirão Preto – SP. O projeto é um frontend estático, desenvolvido com HTML5, CSS3 e JavaScript puro, sem frameworks ou dependências de build.
 
-🌐 **Acesse:** [eloclinipiranga.com.br](https://eloclinipiranga.com.br)
+🌐 **Acesse:** [eloclinipiranga.com.br](https://eloclin.com)
 
 ---
 
@@ -30,7 +30,7 @@ O site apresenta a Eloclin Ipiranga ao público, destacando especialidades médi
 
 ## Repositório do Backend
 
-Este repositório contém apenas o **frontend** do projeto. O backend da Eloclin — responsável pelo envio de e-mails do formulário de contato — está em um repositório separado:
+Este repositório contém apenas o **frontend** do projeto. O backend da Eloclin, responsável pelo envio de e-mails do formulário de contato, está em um repositório separado:
 
 📦 **[github.com/isabcfrancisco/backend_eloclin](https://github.com/isabcfrancisco/backend_eloclin)**
 
