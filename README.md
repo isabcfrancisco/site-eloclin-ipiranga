@@ -1,8 +1,8 @@
-# Eloclin Ipiranga — Site Institucional
+# Eloclin Ipiranga - Site Institucional
 
 Site institucional da **Eloclin Ipiranga**, clínica médica popular localizada em Ribeirão Preto – SP. O projeto é um frontend estático, desenvolvido com HTML5, CSS3 e JavaScript puro, sem frameworks ou dependências de build.
 
-🌐 **Acesse:** [eloclinipiranga.com.br](https://eloclinipiranga.com.br)
+🌐 **Acesse:** [eloclin.com](https://eloclin.com)
 
 ---
 
@@ -30,7 +30,7 @@ O site apresenta a Eloclin Ipiranga ao público, destacando especialidades médi
 
 ## Repositório do Backend
 
-Este repositório contém apenas o **frontend** do projeto. O backend da Eloclin — responsável pelo envio de e-mails do formulário de contato — está em um repositório separado:
+Este repositório contém apenas o **frontend** do projeto. O backend da Eloclin, responsável pelo envio de e-mails do formulário de contato, está em um repositório separado:
 
 📦 **[github.com/isabcfrancisco/backend_eloclin](https://github.com/isabcfrancisco/backend_eloclin)**
 
@@ -42,7 +42,7 @@ O backend é uma API desenvolvida em **Python com Flask**, que recebe os dados d
 
 | Arquivo                        | Descrição                                                          |
 |--------------------------------|--------------------------------------------------------------------|
-| `index.html`                   | Página principal — hero, convênios, especialidades, preços, sobre, estrutura, valores, depoimentos e contato |
+| `index.html`                   | Página principal - hero, convênios, especialidades, preços, sobre, estrutura, valores, depoimentos e contato |
 | `equipe.html`                  | Especialidades e valores da clínica                                |
 | `exames.html`                  | Catálogo completo de exames e passo a passo de agendamento         |
 | `politica-de-privacidade.html` | Política de privacidade                                            |
