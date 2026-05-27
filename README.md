@@ -2,7 +2,7 @@
 
 Site institucional da **Eloclin Ipiranga**, clínica médica popular localizada em Ribeirão Preto – SP. O projeto é um frontend estático, desenvolvido com HTML5, CSS3 e JavaScript puro, sem frameworks ou dependências de build.
 
-🌐 **Acesse:** [eloclinipiranga.com.br](https://eloclin.com)
+🌐 **Acesse:** [eloclin.com](https://eloclin.com)
 
 ---
 
